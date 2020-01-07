@@ -12,6 +12,8 @@ import { terser } from "rollup-plugin-terser"
 import livereload from "rollup-plugin-livereload"
 import sveltePreprocessor from "svelte-preprocess"
 import sass from "rollup-plugin-sass"
+import url from "rollup-plugin-url"
+import image from "rollup-plugin-image"
 
 const plugins = [
     svelte({
@@ -29,9 +31,11 @@ const plugins = [
         raw: false
     }),
     sass({ output: "dist/bundle_theme.css" }),
-    typescript({ typescript: typescriptCompiler }),
+    typescript({ typescript: typescriptCompiler, objectHashIgnoreUnknownHack: true }),
     commonjs({ include: "node_modules/**" }),
-    resolve()
+    resolve(),
+    url(),
+    image()
 ]
 if (process.env.NODE_ENV === "development") {
     plugins.push(
