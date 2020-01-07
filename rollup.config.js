@@ -11,6 +11,7 @@ import typescriptCompiler from "typescript"
 import { terser } from "rollup-plugin-terser"
 import livereload from "rollup-plugin-livereload"
 import sveltePreprocessor from "svelte-preprocess"
+import sass from "rollup-plugin-sass"
 
 const plugins = [
     svelte({
@@ -27,6 +28,7 @@ const plugins = [
         dest: "dist/index.css",
         raw: false
     }),
+    sass({ output: "dist/bundle_theme.css" }),
     typescript({ typescript: typescriptCompiler }),
     commonjs({ include: "node_modules/**" }),
     resolve()

@@ -1,5 +1,8 @@
-<script lang="typescript">
-  const world: string = "Tests";
+<script lang="ts">
+  import Navbar from "./components/Navbar.svelte";
+  const world: string = "strong";
 </script>
 
-<main>Hello {world}</main>
+<main>
+  <Navbar />
+</main>
