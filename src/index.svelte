@@ -8,9 +8,5 @@
 
 <main>
   <Navbar />
-  <div class="section">
-    <div class="container">
-      <Router {routes} />
-    </div>
-  </div>
+  <Router {routes} />
 </main>

@@ -1,0 +1,9 @@
+/** @format */
+
+@charset "utf-8";
+
+$slick-prev-character: "\2190" !default;
+$slick-next-character: "\2192" !default;
+$slick-dot-character: "\2022" !default;
+
+@import "../../node_modules/slick-carousel/slick/slick.scss";
