@@ -5,4 +5,5 @@ import "./sass/theme.scss"
 
 new Svelte({
     target: document.body
+    // hydrate: true
 })

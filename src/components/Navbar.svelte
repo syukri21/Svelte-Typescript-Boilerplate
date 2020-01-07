@@ -1,5 +1,5 @@
 <script lang="ts">
-
+  import { link } from "svelte-spa-router";
 </script>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -11,7 +11,6 @@
         height="28"
         alt="#" />
     </a>
-
     <a
       role="button"
       class="navbar-burger burger"
@@ -28,9 +27,8 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="/home" alt="#">Home</a>
-
-      <a class="navbar-item" href="/home" alt="#">Documentation</a>
+      <a class="navbar-item" href="/home" use:link>Home</a>
+      <a class="navbar-item" href="/documentation" use:link>Documentation</a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link" alt="#" href="/home">More</a>
