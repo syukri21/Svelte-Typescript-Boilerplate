@@ -1,3 +1,5 @@
+/** @format */
+
 import svelte from "rollup-plugin-svelte"
 import commonjs from "rollup-plugin-commonjs"
 import resolve from "rollup-plugin-node-resolve"
@@ -11,42 +13,42 @@ import livereload from "rollup-plugin-livereload"
 import sveltePreprocessor from "svelte-preprocess"
 
 const plugins = [
-  svelte({
-    dev: process.env.NODE_ENV === "development",
-    extensions: [".svelte"],
-    preprocess: sveltePreprocessor(),
-  }),
-  html({
-    template: "src/index.html",
-    dest: "dist",
-    filename: "index.html"
-  }),
-  css({
-    dest: 'dist/index.css',
-    raw: false
-  }),
-  typescript({ typescript: typescriptCompiler }),
-  commonjs({ include: "node_modules/**" }),
-  resolve()
-];
-if (process.env.NODE_ENV === "development") {
-  plugins.push(
-    serve({
-      contentBase: './dist',
-      open: false
+    svelte({
+        dev: process.env.NODE_ENV === "development",
+        extensions: [".svelte"],
+        preprocess: sveltePreprocessor()
     }),
-    livereload({ watch: "./dist" })
-  );
+    html({
+        template: "src/index.html",
+        dest: "dist",
+        filename: "index.html"
+    }),
+    css({
+        dest: "dist/index.css",
+        raw: false
+    }),
+    typescript({ typescript: typescriptCompiler }),
+    commonjs({ include: "node_modules/**" }),
+    resolve()
+]
+if (process.env.NODE_ENV === "development") {
+    plugins.push(
+        serve({
+            contentBase: "./dist",
+            open: false
+        }),
+        livereload({ watch: "./dist" })
+    )
 } else {
-  plugins.push(terser({ sourcemap: true }))
+    plugins.push(terser({ sourcemap: true }))
 }
 
 module.exports = {
-  input: "src/index.ts",
-  output: {
-    file: "dist/index.js",
-    sourcemap: true,
-    format: "iife"
-  },
-  plugins
+    input: "src/index.ts",
+    output: {
+        file: "dist/index.js",
+        sourcemap: true,
+        format: "iife"
+    },
+    plugins
 }

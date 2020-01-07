@@ -1,9 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "baseUrl": "./"
-  },
-  "include": [
-    "src/**/*"
-  ]
+    "compilerOptions": {
+        "target": "es6",
+        "baseUrl": "./"
+    },
+    "include": ["src/**/*"]
 }
