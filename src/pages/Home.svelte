@@ -3,6 +3,9 @@
   import "slick-carousel/slick/slick.min.js";
   import "../sass/slick-theme.scss";
 
+  import Icon from "fa-svelte";
+  import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
+
   import { onMount } from "svelte";
 
   onMount(() => {
@@ -43,7 +46,10 @@
                 </p>
                 <div class="mt-4">
                   <button class="button is-link is-light is-uppercase">
-                    Shop Now
+                    <span class="icon">
+                      <Icon icon={faPlay} />
+                    </span>
+                    <span>Shop Now</span>
                   </button>
                 </div>
               </div>
