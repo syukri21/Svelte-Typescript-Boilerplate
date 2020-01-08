@@ -1,11 +1,7 @@
 <script lang="ts">
   import jQuery from "jquery";
   import "slick-carousel/slick/slick.min.js";
-
   import "../sass/slick-theme.scss";
-  import Lake1 from "../assets/thelake.jpg";
-  import Lake2 from "../assets/thelake2.jpg";
-  import Lake3 from "../assets/thelake3.jpg";
 
   import { onMount } from "svelte";
 
@@ -15,31 +11,47 @@
 </script>
 
 <style>
-  .container-image {
-    width: 100%;
+  .container-carousel-item {
+    width: 80%;
     height: 500px;
   }
 
-  .image {
-    object-fit: fill;
-    width: 100%;
-    height: auto;
+  .height-fit {
+    height: 100%;
+  }
+
+  .max-width {
+    max-width: 450px;
   }
 </style>
 
-<div class="hero has-background-primary has-text-white">
-  <div class="section py-0">
-    <div class="container">
+<div class="hero">
+  <div class="section py-0 ">
+    <div class="container has-background-primary">
       <div id="slickCarousel">
-        <div class="container-image">
-          <img class="image" src={Lake1} alt="#" />
+        <div class="container-carousel-item">
+          <div class="columns height-fit">
+            <div class="column height-fit" />
+            <div class="column height-fit d-flex align-items-center">
+              <div class="d-flex flex-column max-width">
+                <h5 class="is-size-5">Men Accessories</h5>
+                <h1 class="is-size-2">Always Be A Gentelman.</h1>
+                <p class="is-size-6 mt-1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  eos sed? Placeat nihil distinctio similique earum
+                  reprehenderit. Optio consectetur.
+                </p>
+                <div class="mt-4">
+                  <button class="button is-link is-light is-uppercase">
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="container-image">
-          <img class="image" src={Lake2} alt="#" />
-        </div>
-        <div class="container-image">
-          <img class="image" src={Lake3} alt="#" />
-        </div>
+        <div class="container-carousel-item" />
+        <div class="container-carousel-item" />
       </div>
     </div>
   </div>
