@@ -22,5 +22,14 @@ $slick-dot-character: "\2022" !default;
 
 $slick-arrow-color: $purple !default;
 
+.position-dot {
+    left: 10px;
+    top: 10px;
+    display: flex !important;
+    height: 0;
+    // flex-direction: column;
+    // transform: translateY(-20%);
+}
+
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
