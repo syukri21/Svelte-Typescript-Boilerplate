@@ -14,6 +14,9 @@ import sveltePreprocessor from "svelte-preprocess"
 import sass from "rollup-plugin-sass"
 import url from "rollup-plugin-url"
 import image from "rollup-plugin-image"
+import copy from "rollup-plugin-copy"
+
+import * as path from "path"
 
 const plugins = [
     svelte({
@@ -32,6 +35,12 @@ const plugins = [
     commonjs({ include: "node_modules/**" }),
     resolve(),
     url(),
+    copy({
+        targets: [
+            { src: ["src/assets/fonts"], dest: "dist" },
+            { src: ["src/assets/images"], dest: "dist" }
+        ]
+    }),
     image()
 ]
 if (process.env.NODE_ENV === "development") {

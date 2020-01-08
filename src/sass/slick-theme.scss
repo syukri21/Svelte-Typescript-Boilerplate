@@ -2,8 +2,25 @@
 
 @charset "utf-8";
 
+@font-face {
+    font-family: "slick";
+    src: url("../fonts/slick.eot") format("eot"), url("../fonts/slick.ttf") format("ttf"), url("../fonts/slick.woff") format("woff"),
+        url("../fonts/slick.svg") format("svg");
+}
+
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+$grey: #f3f3f3;
+
 $slick-prev-character: "\2190" !default;
+$slick-font-family: "slick" !default;
 $slick-next-character: "\2192" !default;
 $slick-dot-character: "\2022" !default;
 
+$slick-arrow-color: $purple !default;
+
 @import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
