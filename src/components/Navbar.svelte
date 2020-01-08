@@ -6,7 +6,7 @@
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" alt="#" href="https://bulma.io">
-        <h1 class="title is-4 has-text-primary">The Lake</h1>
+        <h1 class="title is-4 has-text-link">The Lake</h1>
       </a>
       <a
         role="button"

@@ -26,10 +26,7 @@ const plugins = [
         dest: "dist",
         filename: "index.html"
     }),
-    css({
-        dest: "dist/index.css",
-        raw: false
-    }),
+    css({ output: "dist/index.css" }),
     sass({ output: "dist/bundle_theme.css" }),
     typescript({ typescript: typescriptCompiler, objectHashIgnoreUnknownHack: true }),
     commonjs({ include: "node_modules/**" }),

@@ -4,6 +4,8 @@
 
   import "../sass/slick-theme.scss";
   import Lake1 from "../assets/thelake.jpg";
+  import Lake2 from "../assets/thelake2.jpg";
+  import Lake3 from "../assets/thelake3.jpg";
 
   import { onMount } from "svelte";
 
@@ -12,16 +14,32 @@
   });
 </script>
 
+<style>
+  .container-image {
+    width: 100%;
+    height: 500px;
+  }
+
+  .image {
+    object-fit: fill;
+    width: 100%;
+    height: auto;
+  }
+</style>
+
 <div class="hero has-background-primary has-text-white">
-  <div class="section">
+  <div class="section py-0">
     <div class="container">
-      <h1 class="is-6 ">Hello</h1>
       <div id="slickCarousel">
-        <div>
-          <img src={Lake1} alt="#" />
+        <div class="container-image">
+          <img class="image" src={Lake1} alt="#" />
         </div>
-        <div>2</div>
-        <div>3</div>
+        <div class="container-image">
+          <img class="image" src={Lake2} alt="#" />
+        </div>
+        <div class="container-image">
+          <img class="image" src={Lake3} alt="#" />
+        </div>
       </div>
     </div>
   </div>
