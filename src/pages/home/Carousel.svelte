@@ -24,7 +24,7 @@
 <style>
   .container-carousel-item {
     width: 80%;
-    height: 500px;
+    height: calc(100vh - 95px);
   }
 
   .height-fit {
@@ -48,6 +48,7 @@
     flex: 1;
     height: 100%;
     width: 100%;
+    z-index: -1;
   }
 
   .circle-container {
@@ -58,11 +59,12 @@
 </style>
 
 <div class="position-relative">
-  <div class="circle">
-    <div class="circle-container has-background-white" />
-  </div>
+
   <div id="slickCarousel">
-    <div class="container-carousel-item">
+    <div class="container-carousel-item position-relative">
+      <div class="circle">
+        <div class="circle-container has-background-white" />
+      </div>
       <div class="columns height-fit">
         <div class="column height-fit">
           <img src="./images/black-suit.png" alt="#" />
