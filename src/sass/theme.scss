@@ -17,4 +17,8 @@ $link: $purple;
 $navbar-dropdown-arrow: $purple;
 $navbar-dropdown-border-top: 2px solid $purple !default;
 
+.height-fit {
+    height: 100%;
+}
+
 @import "../../node_modules/bulma/bulma.sass";

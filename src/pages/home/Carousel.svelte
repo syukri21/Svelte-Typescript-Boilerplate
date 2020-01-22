@@ -24,7 +24,7 @@
 <style>
   .container-carousel-item {
     width: 80%;
-    height: calc(100vh - 95px);
+    height: 550px;
   }
 
   .height-fit {
@@ -55,11 +55,11 @@
     height: 450px;
     width: 450px;
     border-radius: 50%;
+    transform: translateX(-60px);
   }
 </style>
 
 <div class="position-relative">
-
   <div id="slickCarousel">
     <div class="container-carousel-item position-relative">
       <div class="circle">
